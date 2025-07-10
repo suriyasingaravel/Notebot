@@ -6,9 +6,8 @@ from chromadb.config import Settings
 import time
 
 # Initialize OpenAI client
-api_key = st.secrets["OPENAI_API_KEY"]
 
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Function to load and chunk the knowledge base
 @st.cache_data
